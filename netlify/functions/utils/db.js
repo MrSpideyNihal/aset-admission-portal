@@ -16,6 +16,7 @@ async function connectToDatabase() {
   const db = await mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    dbName: 'pfersb'
   });
 
   cachedDb = db;
