@@ -100,7 +100,7 @@ const Home = () => {
           <Star size={24} style={{ color: '#00D4FF' }} />
         </div>
 
-        <h1 style={{ fontSize: '4rem', fontWeight: 800, marginBottom: '20px', minHeight: '80px' }} className="gradient-text-purple-cyan">
+        <h1 style={{ fontSize: '4rem', fontWeight: 800, marginBottom: '20px', minHeight: '80px', fontFamily: 'var(--font-display)' }} className="gradient-text-purple-cyan">
           {typedText}
           <span style={{ borderRight: '3px solid #00D4FF', animation: 'blink 0.7s infinite' }}>&nbsp;</span>
         </h1>
@@ -110,9 +110,9 @@ const Home = () => {
 
         {/* Badges row */}
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '12px', marginBottom: '40px' }}>
-          <span className="glass-badge" style={{ background: 'rgba(108, 99, 255, 0.1)', color: '#b4b0ff' }}><Shield size={14} style={{ marginRight: '6px' }} /> ISO 9001:2015</span>
-          <span className="glass-badge" style={{ background: 'rgba(0, 212, 255, 0.1)', color: '#9bf3ff' }}><Award size={14} style={{ marginRight: '6px' }} /> AICTE Approved</span>
-          <span className="glass-badge" style={{ background: 'rgba(46, 204, 113, 0.1)', color: '#a3f7bf' }}><Users size={14} style={{ marginRight: '6px' }} /> KTU Affiliated</span>
+          <span className="glass-badge glass-badge-purple"><Shield size={14} style={{ marginRight: '6px' }} /> ISO 9001:2015</span>
+          <span className="glass-badge glass-badge-cyan"><Award size={14} style={{ marginRight: '6px' }} /> AICTE Approved</span>
+          <span className="glass-badge glass-badge-green"><Users size={14} style={{ marginRight: '6px' }} /> KTU Affiliated</span>
         </div>
 
         {/* Buttons */}
@@ -154,7 +154,7 @@ const Home = () => {
 
       {/* Courses Section */}
       <section style={{ marginBottom: '80px' }}>
-        <h2 className="gradient-text-purple-cyan" style={{ fontSize: '2.2rem', textAlign: 'center', marginBottom: '12px' }}>Our B.Tech Programs</h2>
+        <h2 className="gradient-text-purple-cyan" style={{ fontSize: '2.2rem', textAlign: 'center', marginBottom: '12px', fontFamily: 'var(--font-display)' }}>Our B.Tech Programs</h2>
         <p style={{ textAlign: 'center', color: 'rgba(255, 255, 255, 0.7)', marginBottom: '48px', maxWidth: '600px', margin: '0 auto 48px auto' }}>
           Explore state-of-the-art engineering curricula curated to match emerging industry demands.
         </p>
@@ -180,7 +180,7 @@ const Home = () => {
 
       {/* Why ASET Section */}
       <section style={{ marginBottom: '80px' }}>
-        <h2 className="gradient-text-purple-cyan" style={{ fontSize: '2.2rem', textAlign: 'center', marginBottom: '40px' }}>Why ASET?</h2>
+        <h2 className="gradient-text-purple-cyan" style={{ fontSize: '2.2rem', textAlign: 'center', marginBottom: '40px', fontFamily: 'var(--font-display)' }}>Why ASET?</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '24px' }}>
           <GlassCard style={{ padding: '24px' }}>
             <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '8px', color: '#00D4FF' }}>Modern Labs</h3>
@@ -203,7 +203,7 @@ const Home = () => {
 
       {/* News Section */}
       <section style={{ marginBottom: '80px' }}>
-        <h2 className="gradient-text-purple-cyan" style={{ fontSize: '2.2rem', textAlign: 'center', marginBottom: '32px' }}>Latest Campus News</h2>
+        <h2 className="gradient-text-purple-cyan" style={{ fontSize: '2.2rem', textAlign: 'center', marginBottom: '32px', fontFamily: 'var(--font-display)' }}>Latest Campus News</h2>
         <div style={{ display: 'flex', gap: '24px', overflowX: 'auto', paddingBottom: '16px', scrollSnapType: 'x mandatory' }}>
           {newsItems.map((news, idx) => (
             <GlassCard key={idx} style={{ padding: '24px', minWidth: '300px', flex: '0 0 300px', scrollSnapAlign: 'start' }}>

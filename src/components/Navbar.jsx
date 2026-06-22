@@ -38,7 +38,7 @@ const Navbar = () => {
           <div style={{ padding: '8px', borderRadius: '12px', background: 'rgba(255, 255, 255, 0.08)', border: '1px solid rgba(255, 255, 255, 0.15)' }}>
             <Award className="text-cyan-400" size={24} style={{ color: '#00D4FF' }} />
           </div>
-          <span className="gradient-text-purple-cyan" style={{ fontSize: '1.6rem', fontWeight: 800, letterSpacing: '1px' }}>
+          <span className="gradient-text-purple-cyan" style={{ fontSize: '1.6rem', fontWeight: 800, letterSpacing: '1px', fontFamily: 'var(--font-display)' }}>
             ASET
           </span>
         </Link>
