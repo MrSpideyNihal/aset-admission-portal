@@ -29,7 +29,7 @@ const Contact = () => {
       <h1 className="gradient-text-purple-cyan" style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '16px' }}>
         Contact Us
       </h1>
-      <p style={{ textAlign: 'center', color: 'rgba(255, 255, 255, 0.75)', marginBottom: '48px', maxWidth: '700px', margin: '0 auto 48px auto', fontSize: '1.1rem' }}>
+      <p style={{ textAlign: 'center', color: 'var(--text-secondary)', marginBottom: '48px', maxWidth: '700px', margin: '0 auto 48px auto', fontSize: '1.1rem' }}>
         Have questions about admissions, programs, or campus visits? Reach out to our helpdesk team.
       </p>
 
@@ -42,7 +42,7 @@ const Contact = () => {
             </div>
             <div>
               <h4 style={{ fontWeight: 600, marginBottom: '4px' }}>Our Location</h4>
-              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>Ahalia Campus, Kozhikode Road, Palakkad, Kerala — 678557</p>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Ahalia Campus, Kozhikode Road, Palakkad, Kerala — 678557</p>
             </div>
           </GlassCard>
 
@@ -52,7 +52,7 @@ const Contact = () => {
             </div>
             <div>
               <h4 style={{ fontWeight: 600, marginBottom: '4px' }}>Call Helpdesk</h4>
-              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>+91 491 2505000 | +91 491 2503000</p>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>+91 491 2505000 | +91 491 2503000</p>
             </div>
           </GlassCard>
 
@@ -62,7 +62,7 @@ const Contact = () => {
             </div>
             <div>
               <h4 style={{ fontWeight: 600, marginBottom: '4px' }}>Email Queries</h4>
-              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>info@ahalia.ac.in | admissions@ahalia.ac.in</p>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>info@ahalia.ac.in | admissions@ahalia.ac.in</p>
             </div>
           </GlassCard>
 
@@ -124,7 +124,7 @@ const Contact = () => {
             />
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '24px' }}>
-              <label style={{ fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.85)', paddingLeft: '4px' }}>Message</label>
+              <label style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', paddingLeft: '4px' }}>Message</label>
               <textarea
                 rows={4}
                 placeholder="Write details of your query..."
@@ -147,7 +147,7 @@ const Contact = () => {
       <GlassCard style={{ padding: '8px', height: '350px', marginBottom: '40px' }}>
         <iframe
           title="ASET Campus Map Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d3919.2312389947846!2d76.81881881533423!3d10.793574992310156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba86fe20cb3dcd3%3A0x6b6fa2536e2f12a2!2sAhalia%20School%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1655900000000!5m2!1sen!2sin"
+          src="https://maps.google.com/maps?q=Ahalia+School+of+Engineering+and+Technology&z=15&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0, borderRadius: '12px' }}

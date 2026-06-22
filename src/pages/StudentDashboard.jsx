@@ -51,7 +51,7 @@ const StudentDashboard = () => {
       case 'rejected':
         return <span className="glass-badge glass-badge-rejected">Rejected</span>;
       default:
-        return <span className="glass-badge" style={{ background: 'rgba(255,255,255,0.06)' }}>Not Started</span>;
+        return <span className="glass-badge" style={{ background: 'var(--glass-bg)' }}>Not Started</span>;
     }
   };
 
@@ -63,7 +63,7 @@ const StudentDashboard = () => {
           Student Area
         </h3>
         <nav style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          <Link to="/student-dashboard" className="nav-link active" style={{ display: 'flex', alignItems: 'center', gap: '10px', borderRadius: '10px', background: 'rgba(255,255,255,0.04)' }}>
+          <Link to="/student-dashboard" className="nav-link active" style={{ display: 'flex', alignItems: 'center', gap: '10px', borderRadius: '10px', background: 'var(--glass-bg)' }}>
             <LayoutDashboard size={18} /> Dashboard
           </Link>
           <Link to="/apply" className="nav-link" style={{ display: 'flex', alignItems: 'center', gap: '10px', borderRadius: '10px' }}>
@@ -72,7 +72,7 @@ const StudentDashboard = () => {
           <Link to="/my-application" className="nav-link" style={{ display: 'flex', alignItems: 'center', gap: '10px', borderRadius: '10px' }}>
             <ClipboardList size={18} /> My Application
           </Link>
-          <hr style={{ border: 'none', borderTop: '1px solid rgba(255,255,255,0.08)', margin: '16px 0' }} />
+           <hr style={{ border: 'none', borderTop: '1px solid var(--glass-border)', margin: '16px 0' }} />
           <button onClick={handleLogout} className="nav-link" style={{ width: '100%', border: 'none', background: 'none', cursor: 'pointer', textAlign: 'left', display: 'flex', alignItems: 'center', gap: '10px', color: '#FF6B6B' }}>
             <LogOut size={18} /> Logout
           </button>
@@ -86,12 +86,12 @@ const StudentDashboard = () => {
           <div>
             <span style={{ fontSize: '0.85rem', color: '#00D4FF', fontWeight: 600 }}>WELCOME BACK</span>
             <h2 style={{ fontSize: '2rem', fontWeight: 800, marginTop: '4px' }}>Hello, {user?.name}!</h2>
-            <p style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.95rem', marginTop: '4px' }}>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginTop: '4px' }}>
               Manage your engineering admission credentials from your personal console.
             </p>
           </div>
-          <div style={{ padding: '12px 24px', borderRadius: '16px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', textAlign: 'center' }}>
-            <span style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', display: 'block', marginBottom: '6px' }}>Status</span>
+          <div style={{ padding: '12px 24px', borderRadius: '16px', background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', textAlign: 'center' }}>
+            <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'block', marginBottom: '6px' }}>Status</span>
             {loading ? <span className="glass-badge">Loading...</span> : getStatusBadge(appStatus)}
           </div>
         </GlassCard>
@@ -102,7 +102,7 @@ const StudentDashboard = () => {
             {appStatus === 'none' ? (
               <div>
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '8px' }}>Ready to Apply?</h3>
-                <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.95rem', marginBottom: '20px' }}>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginBottom: '20px' }}>
                   You have not submitted an admission application for the current academic cycle. Complete the 4-step form now.
                 </p>
                 <GlassButton to="/apply" variant="primary">
@@ -114,7 +114,7 @@ const StudentDashboard = () => {
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '8px' }}>
                   Application Submitted
                 </h3>
-                <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.95rem', marginBottom: '20px' }}>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginBottom: '20px' }}>
                   Your application for {application?.course} B.Tech branch is currently <strong>{appStatus.replace('_', ' ')}</strong>.
                 </p>
                 <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
@@ -122,7 +122,7 @@ const StudentDashboard = () => {
                     View Progress Timeline
                   </GlassButton>
                   {application?.remarks && (
-                    <div style={{ flexGrow: 1, padding: '12px 16px', borderRadius: '12px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255,255,255,0.08)', fontSize: '0.9rem', color: 'rgba(255,255,255,0.9)' }}>
+                    <div style={{ flexGrow: 1, padding: '12px 16px', borderRadius: '12px', background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', fontSize: '0.9rem', color: 'var(--text-primary)' }}>
                       <strong>Remarks:</strong> {application.remarks}
                     </div>
                   )}
@@ -138,7 +138,7 @@ const StudentDashboard = () => {
             <h4 style={{ fontWeight: 700, marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px', color: '#00D4FF' }}>
               <CheckSquare size={18} /> Admission Guidelines
             </h4>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '0.9rem', color: 'rgba(255,255,255,0.75)' }}>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
               <li style={{ display: 'flex', gap: '8px' }}><Check size={16} style={{ color: '#2ECC71', flexShrink: 0 }} /> Ensure PCM marks sum to at least 50%</li>
               <li style={{ display: 'flex', gap: '8px' }}><Check size={16} style={{ color: '#2ECC71', flexShrink: 0 }} /> Enter correct KEAM rank / JEE percentile</li>
               <li style={{ display: 'flex', gap: '8px' }}><Check size={16} style={{ color: '#2ECC71', flexShrink: 0 }} /> Specify branch preferences accurately</li>
@@ -150,7 +150,7 @@ const StudentDashboard = () => {
             <h4 style={{ fontWeight: 700, marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px', color: '#6C63FF' }}>
               <Clock size={18} /> Required Credentials
             </h4>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '0.9rem', color: 'rgba(255,255,255,0.75)' }}>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
               <li style={{ display: 'flex', gap: '8px' }}><Check size={16} style={{ color: '#6C63FF', flexShrink: 0 }} /> Class 10 & 12 Marksheets</li>
               <li style={{ display: 'flex', gap: '8px' }}><Check size={16} style={{ color: '#6C63FF', flexShrink: 0 }} /> Transfer & Migration Certificates</li>
               <li style={{ display: 'flex', gap: '8px' }}><Check size={16} style={{ color: '#6C63FF', flexShrink: 0 }} /> KEAM/JEE Score Cards</li>

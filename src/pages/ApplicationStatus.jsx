@@ -93,10 +93,10 @@ const ApplicationStatus = () => {
           <Link to="/apply" className="nav-link" style={{ display: 'flex', alignItems: 'center', gap: '10px', borderRadius: '10px' }}>
             <FileText size={18} /> Apply for Admission
           </Link>
-          <Link to="/my-application" className="nav-link active" style={{ display: 'flex', alignItems: 'center', gap: '10px', borderRadius: '10px', background: 'rgba(255,255,255,0.04)' }}>
+          <Link to="/my-application" className="nav-link active" style={{ display: 'flex', alignItems: 'center', gap: '10px', borderRadius: '10px', background: 'var(--glass-bg)' }}>
             <ClipboardList size={18} /> My Application
           </Link>
-          <hr style={{ border: 'none', borderTop: '1px solid rgba(255,255,255,0.08)', margin: '16px 0' }} />
+          <hr style={{ border: 'none', borderTop: '1px solid var(--glass-border)', margin: '16px 0' }} />
           <button onClick={handleLogout} className="nav-link" style={{ width: '100%', border: 'none', background: 'none', cursor: 'pointer', textAlign: 'left', display: 'flex', alignItems: 'center', gap: '10px', color: '#FF6B6B' }}>
             <LogOut size={18} /> Logout
           </button>
@@ -114,7 +114,7 @@ const ApplicationStatus = () => {
           <GlassCard style={{ padding: '40px', textAlign: 'center' }}>
             <AlertCircle size={48} style={{ color: '#FFD93D', margin: '0 auto 16px auto' }} />
             <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '8px' }}>No Application Found</h3>
-            <p style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '24px' }}>
+            <p style={{ color: 'var(--text-secondary)', marginBottom: '24px' }}>
               You have not submitted an admission application yet.
             </p>
             <GlassButton to="/apply" variant="primary">
@@ -125,9 +125,9 @@ const ApplicationStatus = () => {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
             {/* Summary card */}
             <GlassCard style={{ padding: '32px' }}>
-              <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '20px', marginBottom: '24px', borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: '20px' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '20px', marginBottom: '24px', borderBottom: '1px solid var(--glass-border)', paddingBottom: '20px' }}>
                 <div>
-                  <span style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)' }}>Course Selected</span>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Course Selected</span>
                   <h3 style={{ fontSize: '1.4rem', fontWeight: 700, marginTop: '4px' }}>{application.course}</h3>
                 </div>
                 <GlassButton onClick={downloadSummary} variant="secondary">
@@ -136,9 +136,9 @@ const ApplicationStatus = () => {
               </div>
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px' }}>
-                <p style={{ fontSize: '0.9rem' }}><strong style={{ color: 'rgba(255,255,255,0.6)' }}>Reference ID:</strong> <br />{application._id}</p>
-                <p style={{ fontSize: '0.9rem' }}><strong style={{ color: 'rgba(255,255,255,0.6)' }}>Submission Date:</strong> <br />{new Date(application.submittedAt).toLocaleDateString()}</p>
-                <p style={{ fontSize: '0.9rem' }}><strong style={{ color: 'rgba(255,255,255,0.6)' }}>Academic Score:</strong> <br />{application.plusTwoPercent}% PCM</p>
+                <p style={{ fontSize: '0.9rem' }}><strong style={{ color: 'var(--text-muted)' }}>Reference ID:</strong> <br />{application._id}</p>
+                <p style={{ fontSize: '0.9rem' }}><strong style={{ color: 'var(--text-muted)' }}>Submission Date:</strong> <br />{new Date(application.submittedAt).toLocaleDateString()}</p>
+                <p style={{ fontSize: '0.9rem' }}><strong style={{ color: 'var(--text-muted)' }}>Academic Score:</strong> <br />{application.plusTwoPercent}% PCM</p>
               </div>
             </GlassCard>
 
@@ -148,7 +148,7 @@ const ApplicationStatus = () => {
               
               <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: '32px' }}>
                 {/* Connector line */}
-                <div style={{ position: 'absolute', left: '20px', top: '10px', bottom: '10px', width: '2px', background: 'rgba(255,255,255,0.1)', zIndex: 1 }}></div>
+                <div style={{ position: 'absolute', left: '20px', top: '10px', bottom: '10px', width: '2px', background: 'var(--glass-border)', zIndex: 1 }}></div>
 
                 {/* Step 1 */}
                 <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
@@ -157,7 +157,7 @@ const ApplicationStatus = () => {
                   </div>
                   <div>
                     <h4 style={{ fontWeight: 700 }}>Application Submitted</h4>
-                    <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem', marginTop: '4px' }}>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '4px' }}>
                       Submitted on {new Date(application.submittedAt).toLocaleDateString()}
                     </p>
                   </div>
@@ -170,7 +170,7 @@ const ApplicationStatus = () => {
                   </div>
                   <div>
                     <h4 style={{ fontWeight: 700 }}>Under Review</h4>
-                    <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem', marginTop: '4px' }}>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '4px' }}>
                       Faculty panel is verifying credentials and eligibility scores.
                     </p>
                   </div>
@@ -189,7 +189,7 @@ const ApplicationStatus = () => {
                   </div>
                   <div>
                     <h4 style={{ fontWeight: 700 }}>Decision</h4>
-                    <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem', marginTop: '4px' }}>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '4px' }}>
                       {application.status === 'accepted' && 'Your application has been accepted for B.Tech admission! Please report to campus.'}
                       {application.status === 'rejected' && 'We regret to inform you that your application could not be accepted at this time.'}
                       {application.status === 'pending' && 'Awaiting final decision from ASET academic board.'}
@@ -204,7 +204,7 @@ const ApplicationStatus = () => {
             {application.remarks && (
               <GlassCard style={{ padding: '24px', borderLeft: '4px solid #FFD93D' }}>
                 <h4 style={{ fontWeight: 700, marginBottom: '8px' }}>Faculty Remarks</h4>
-                <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.9rem' }}>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
                   "{application.remarks}"
                 </p>
               </GlassCard>

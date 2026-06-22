@@ -11,7 +11,7 @@ const NotFound = () => {
           404
         </h1>
         <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '12px' }}>Oops! Page not found</h2>
-        <p style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '32px', fontSize: '0.95rem' }}>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '32px', fontSize: '0.95rem' }}>
           The URL you requested does not exist or may have been moved. Let's get you back to the home page.
         </p>
         <GlassButton to="/" variant="primary" style={{ justifyContent: 'center', width: '100%' }}>

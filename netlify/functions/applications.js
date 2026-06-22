@@ -12,10 +12,12 @@ const JWT_SECRET = process.env.JWT_SECRET || 'aset_super_secret_jwt_key_2024';
 
 // Database middleware
 app.use(async (req, res, next) => {
+  console.log(`[API Request] ${req.method} ${req.path}`);
   try {
     await connectToDatabase();
     next();
   } catch (error) {
+    console.error('[API Database Connection Error]:', error);
     res.status(500).json({ message: 'Database connection error', error: error.message });
   }
 });

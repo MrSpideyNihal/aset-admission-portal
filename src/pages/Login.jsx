@@ -66,7 +66,7 @@ const Login = () => {
           <h2 className="gradient-text-purple-cyan" style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '6px', fontFamily: 'var(--font-display)' }}>
             ASET Portal
           </h2>
-          <p style={{ color: 'rgba(255, 255, 255, 0.6)', fontSize: '0.9rem' }}>Sign in to continue your journey</p>
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Sign in to continue your journey</p>
         </div>
 
         {/* Role Selector */}
@@ -148,7 +148,7 @@ const Login = () => {
                 top: '38px',
                 background: 'none',
                 border: 'none',
-                color: 'rgba(255, 255, 255, 0.5)',
+                color: 'var(--text-muted)',
                 cursor: 'pointer'
               }}
             >
@@ -168,7 +168,7 @@ const Login = () => {
 
         {/* Footer */}
         <div style={{ marginTop: '24px', textAlign: 'center', fontSize: '0.85rem' }}>
-          <span style={{ color: 'rgba(255, 255, 255, 0.6)' }}>Don't have an account? </span>
+          <span style={{ color: 'var(--text-secondary)' }}>Don't have an account? </span>
           <Link to="/register" style={{ color: '#00D4FF', textDecoration: 'none', fontWeight: 600 }}>
             Register Here
           </Link>

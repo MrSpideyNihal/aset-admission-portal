@@ -157,7 +157,7 @@ const Courses = () => {
       <h1 className="gradient-text-purple-cyan" style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '16px' }}>
         Our B.Tech Branches
       </h1>
-      <p style={{ textAlign: 'center', color: 'rgba(255, 255, 255, 0.75)', marginBottom: '48px', maxWidth: '700px', margin: '0 auto 48px auto', fontSize: '1.1rem' }}>
+      <p style={{ textAlign: 'center', color: 'var(--text-secondary)', marginBottom: '48px', maxWidth: '700px', margin: '0 auto 48px auto', fontSize: '1.1rem' }}>
         ASET offers AICTE approved four-year undergraduate B.Tech programs affiliated to APJ Abdul Kalam Technological University (KTU).
       </p>
 
@@ -171,10 +171,10 @@ const Courses = () => {
               <span className="glass-badge" style={{ background: 'rgba(108, 99, 255, 0.1)', color: '#b4b0ff' }}>{branch.seats}</span>
             </div>
             <div style={{ fontSize: '0.9rem', marginBottom: '16px', lineHeight: '1.5', flexGrow: 1 }}>
-              <p style={{ color: 'rgba(255,255,255,0.9)', marginBottom: '8px' }}>
+              <p style={{ color: 'var(--text-primary)', marginBottom: '8px' }}>
                 <strong>Eligibility:</strong> {branch.eligibility}
               </p>
-              <p style={{ color: 'rgba(255,255,255,0.7)' }}>
+              <p style={{ color: 'var(--text-secondary)' }}>
                 <strong>Career Prospects:</strong> {branch.prospects}
               </p>
             </div>
@@ -189,7 +189,7 @@ const Courses = () => {
       <h2 className="gradient-text-purple-cyan" style={{ fontSize: '2rem', textAlign: 'center', marginBottom: '12px' }}>
         ASET B.Tech Fee Structure (Admissions 2025-26)
       </h2>
-      <p style={{ textAlign: 'center', color: 'rgba(255, 255, 255, 0.7)', marginBottom: '32px', maxWidth: '650px', margin: '0 auto 32px auto' }}>
+      <p style={{ textAlign: 'center', color: 'var(--text-secondary)', marginBottom: '32px', maxWidth: '650px', margin: '0 auto 32px auto' }}>
         View detailed breakdown structure for Merit, Management, and NRI quotas across all branches.
       </p>
 
@@ -210,9 +210,9 @@ const Courses = () => {
             style={{
               padding: '10px 18px',
               borderRadius: '10px',
-              border: `1px solid ${activeFeeTab === tab.id ? '#00D4FF' : 'rgba(255, 255, 255, 0.15)'}`,
-              background: activeFeeTab === tab.id ? 'rgba(0, 212, 255, 0.12)' : 'rgba(255, 255, 255, 0.04)',
-              color: 'white',
+              border: `1px solid ${activeFeeTab === tab.id ? '#00D4FF' : 'var(--glass-btn-border)'}`,
+              background: activeFeeTab === tab.id ? 'rgba(0, 212, 255, 0.12)' : 'var(--glass-btn-bg)',
+              color: 'var(--text-primary)',
               cursor: 'pointer',
               fontWeight: 600,
               transition: 'all 0.3s ease'
@@ -242,19 +242,19 @@ const Courses = () => {
           <tbody>
             {feeData[activeFeeTab].rows.map((row, idx) => (
               <tr key={idx}>
-                <td style={{ fontWeight: row.highlight ? 800 : 500, color: row.highlight ? '#00D4FF' : '#fff' }}>
+                <td style={{ fontWeight: row.highlight ? 800 : 500, color: row.highlight ? '#00D4FF' : 'var(--text-primary)' }}>
                   {row.name}
                 </td>
-                <td style={{ fontWeight: row.highlight ? 800 : 400, color: row.highlight ? '#00D4FF' : 'rgba(255,255,255,0.9)' }}>
+                <td style={{ fontWeight: row.highlight ? 800 : 400, color: row.highlight ? '#00D4FF' : 'var(--text-primary)' }}>
                   {row.y1}
                 </td>
-                <td style={{ fontWeight: row.highlight ? 800 : 400, color: row.highlight ? '#00D4FF' : 'rgba(255,255,255,0.9)' }}>
+                <td style={{ fontWeight: row.highlight ? 800 : 400, color: row.highlight ? '#00D4FF' : 'var(--text-primary)' }}>
                   {row.y2}
                 </td>
-                <td style={{ fontWeight: row.highlight ? 800 : 400, color: row.highlight ? '#00D4FF' : 'rgba(255,255,255,0.9)' }}>
+                <td style={{ fontWeight: row.highlight ? 800 : 400, color: row.highlight ? '#00D4FF' : 'var(--text-primary)' }}>
                   {row.y3}
                 </td>
-                <td style={{ fontWeight: row.highlight ? 800 : 400, color: row.highlight ? '#00D4FF' : 'rgba(255,255,255,0.9)' }}>
+                <td style={{ fontWeight: row.highlight ? 800 : 400, color: row.highlight ? '#00D4FF' : 'var(--text-primary)' }}>
                   {row.y4}
                 </td>
               </tr>
@@ -269,7 +269,7 @@ const Courses = () => {
           <h4 style={{ fontWeight: 700, marginBottom: '12px', color: '#FFD93D', display: 'flex', alignItems: 'center', gap: '8px' }}>
             <HelpCircle size={18} /> Important Notes
           </h4>
-          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.75)' }}>
+          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
             <li>• Tuition fee subject to changes as notified by Government.</li>
             <li>• Yearly fee for conveyance (College Bus) / Hostel is charged separately.</li>
             <li>• University Exam fees paid as per KTU guidelines.</li>
@@ -281,7 +281,7 @@ const Courses = () => {
           <h4 style={{ fontWeight: 700, marginBottom: '12px', color: '#2ECC71', display: 'flex', alignItems: 'center', gap: '8px' }}>
             <Award size={18} /> Merit Scholarships
           </h4>
-          <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.8)', lineHeight: '1.5' }}>
+          <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
             Ahalia Merit Scholarships are awarded to high-performing students. Merit category fee concessions are available for KEAM toppers, JEE high-scoring percentiles, and outstanding Plus Two students.
           </p>
         </GlassCard>

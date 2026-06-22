@@ -14,7 +14,7 @@ const GlassInput = ({
         <label
           htmlFor={id}
           className="text-sm font-medium"
-          style={{ fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.85)', paddingLeft: '4px' }}
+          style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', paddingLeft: '4px' }}
         >
           {label}
         </label>

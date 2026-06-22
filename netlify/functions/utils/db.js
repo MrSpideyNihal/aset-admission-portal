@@ -1,26 +1,35 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 
 let cachedDb = null;
 
 async function connectToDatabase() {
   if (cachedDb) {
+    console.log('[Database] Using cached database connection.');
     return cachedDb;
   }
 
   const uri = process.env.MONGODB_URI;
   if (!uri) {
+    console.error('[Database] Connection failed: MONGODB_URI environment variable is missing.');
     throw new Error('Please define the MONGODB_URI environment variable inside .env');
   }
 
-  // Connect to MongoDB
-  const db = await mongoose.connect(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    dbName: 'pfersb'
-  });
+  // Print a sanitized URI in logs to hide the password for security
+  const sanitizedUri = uri.replace(/\/\/([^:]+):([^@]+)@/, '//$1:****@');
+  console.log(`[Database] Initiating connection to MongoDB: ${sanitizedUri}`);
 
-  cachedDb = db;
-  return db;
+  try {
+    const db = await mongoose.connect(uri, {
+      dbName: 'pfersb'
+    });
+    console.log('[Database] MongoDB connection established successfully.');
+    cachedDb = db;
+    return db;
+  } catch (error) {
+    console.error('[Database] Connection error details:', error);
+    throw error;
+  }
 }
 
 // Define User Schema

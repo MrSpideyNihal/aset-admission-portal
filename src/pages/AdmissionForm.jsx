@@ -139,11 +139,11 @@ const AdmissionForm = () => {
           <h2 className="gradient-text-purple-cyan" style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '12px' }}>
             Congratulations!
           </h2>
-          <p style={{ color: 'rgba(255,255,255,0.85)', marginBottom: '24px', fontSize: '1rem' }}>
+          <p style={{ color: 'var(--text-secondary)', marginBottom: '24px', fontSize: '1rem' }}>
             Your admission application has been submitted successfully to Ahalia School of Engineering & Technology (ASET).
           </p>
           <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', padding: '16px', borderRadius: '12px', marginBottom: '32px' }}>
-            <span style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.5)', display: 'block', marginBottom: '4px' }}>APPLICATION REFERENCE ID</span>
+            <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'block', marginBottom: '4px' }}>APPLICATION REFERENCE ID</span>
             <span style={{ fontFamily: 'monospace', fontWeight: 700, color: '#00D4FF', fontSize: '1.1rem' }}>{applicationId}</span>
           </div>
           <div style={{ display: 'flex', gap: '16px' }}>
@@ -200,8 +200,8 @@ const AdmissionForm = () => {
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '20px', marginTop: '16px' }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '12px' }}>
-                <label style={{ fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.85)' }}>Gender</label>
-                <select className="glass-input" value={gender} onChange={(e) => setGender(e.target.value)} style={{ background: '#111827' }}>
+                <label style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Gender</label>
+                <select className="glass-input" value={gender} onChange={(e) => setGender(e.target.value)}>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
                   <option value="Other">Other</option>
@@ -209,8 +209,8 @@ const AdmissionForm = () => {
               </div>
               <GlassInput label="Nationality" placeholder="Indian" value={nationality} onChange={(e) => setNationality(e.target.value)} required />
               <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '12px' }}>
-                <label style={{ fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.85)' }}>Category</label>
-                <select className="glass-input" value={category} onChange={(e) => setCategory(e.target.value)} style={{ background: '#111827' }}>
+                <label style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Category</label>
+                <select className="glass-input" value={category} onChange={(e) => setCategory(e.target.value)}>
                   <option value="General">General</option>
                   <option value="OBC">OBC</option>
                   <option value="SC">SC</option>
@@ -220,7 +220,7 @@ const AdmissionForm = () => {
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '16px', marginBottom: '32px' }}>
-              <label style={{ fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.85)' }}>Permanent Address</label>
+              <label style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Permanent Address</label>
               <textarea rows={3} className="glass-input" placeholder="Enter residential address details" value={address} onChange={(e) => setAddress(e.target.value)} required style={{ resize: 'none' }} />
             </div>
 
@@ -297,8 +297,8 @@ const AdmissionForm = () => {
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '16px', marginBottom: '32px' }}>
-              <label style={{ fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.85)' }}>Board of Examination</label>
-              <select className="glass-input" value={boardName} onChange={(e) => setBoardName(e.target.value)} style={{ background: '#111827' }}>
+              <label style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Board of Examination</label>
+              <select className="glass-input" value={boardName} onChange={(e) => setBoardName(e.target.value)}>
                 <option value="CBSE">CBSE</option>
                 <option value="Kerala HSE">Kerala State HSE</option>
                 <option value="ICSE">ICSE</option>
@@ -321,7 +321,7 @@ const AdmissionForm = () => {
         {step === 3 && (
           <form onSubmit={handleNext}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '32px' }}>
-              <label style={{ fontSize: '1rem', fontWeight: 600, color: 'rgba(255,255,255,0.9)' }}>
+              <label style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--text-primary)' }}>
                 Select B.Tech Branch (1st Preference)
               </label>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px' }}>
@@ -346,8 +346,8 @@ const AdmissionForm = () => {
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '32px' }}>
-              <label style={{ fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.85)' }}>Second Preference (Optional)</label>
-              <select className="glass-input" value={preference2} onChange={(e) => setPreference2(e.target.value)} style={{ background: '#111827' }}>
+              <label style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Second Preference (Optional)</label>
+              <select className="glass-input" value={preference2} onChange={(e) => setPreference2(e.target.value)}>
                 {branches.filter((b) => b !== course).map((b, idx) => (
                   <option key={idx} value={b}>{b}</option>
                 ))}
@@ -395,7 +395,7 @@ const AdmissionForm = () => {
 
             <div style={{ display: 'flex', gap: '8px', alignItems: 'center', marginBottom: '32px' }}>
               <input type="checkbox" id="declare" required style={{ width: '16px', height: '16px', cursor: 'pointer' }} />
-              <label htmlFor="declare" style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.8)', cursor: 'pointer' }}>
+              <label htmlFor="declare" style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', cursor: 'pointer' }}>
                 I confirm that all the information provided above is accurate to the best of my knowledge.
               </label>
             </div>

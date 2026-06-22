@@ -116,7 +116,7 @@ const Register = () => {
           <h2 className="gradient-text-purple-cyan" style={{ fontSize: '1.8rem', fontWeight: 800, fontFamily: 'var(--font-display)' }}>
             Create Account
           </h2>
-          <p style={{ color: 'rgba(255, 255, 255, 0.6)', fontSize: '0.9rem', marginTop: '4px' }}>
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginTop: '4px' }}>
             Step {step} of 2: {step === 1 ? 'Credentials & Role' : 'Profile Details'}
           </p>
         </div>
@@ -220,16 +220,15 @@ const Register = () => {
                   required
                 />
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '12px' }}>
-                  <label style={{ fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.85)', paddingLeft: '4px' }}>Gender</label>
+                  <label style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', paddingLeft: '4px' }}>Gender</label>
                   <select
                     className="glass-input"
                     value={gender}
                     onChange={(e) => setGender(e.target.value)}
-                    style={{ background: 'rgba(11, 15, 25, 0.8)' }}
                   >
-                    <option value="Male" style={{ background: '#111827' }}>Male</option>
-                    <option value="Female" style={{ background: '#111827' }}>Female</option>
-                    <option value="Other" style={{ background: '#111827' }}>Other</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
                   </select>
                 </div>
                 <GlassInput
@@ -243,19 +242,18 @@ const Register = () => {
             ) : (
               <>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '12px' }}>
-                  <label style={{ fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.85)', paddingLeft: '4px' }}>Department</label>
+                  <label style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', paddingLeft: '4px' }}>Department</label>
                   <select
                     className="glass-input"
                     value={department}
                     onChange={(e) => setDepartment(e.target.value)}
-                    style={{ background: 'rgba(11, 15, 25, 0.8)' }}
                   >
-                    <option value="Computer Science & Engineering" style={{ background: '#111827' }}>Computer Science</option>
-                    <option value="Artificial Intelligence & Machine Learning" style={{ background: '#111827' }}>AI & ML</option>
-                    <option value="Electronics & Communication Engineering" style={{ background: '#111827' }}>Electronics & Comm</option>
-                    <option value="Electrical & Electronics Engineering" style={{ background: '#111827' }}>Electrical & Elect</option>
-                    <option value="Mechanical Engineering" style={{ background: '#111827' }}>Mechanical</option>
-                    <option value="Civil Engineering" style={{ background: '#111827' }}>Civil</option>
+                    <option value="Computer Science & Engineering">Computer Science</option>
+                    <option value="Artificial Intelligence & Machine Learning">AI & ML</option>
+                    <option value="Electronics & Communication Engineering">Electronics & Comm</option>
+                    <option value="Electrical & Electronics Engineering">Electrical & Elect</option>
+                    <option value="Mechanical Engineering">Mechanical</option>
+                    <option value="Civil Engineering">Civil</option>
                   </select>
                 </div>
                 <GlassInput
@@ -297,7 +295,7 @@ const Register = () => {
         )}
 
         <div style={{ marginTop: '24px', textAlign: 'center', fontSize: '0.85rem' }}>
-          <span style={{ color: 'rgba(255, 255, 255, 0.6)' }}>Already have an account? </span>
+          <span style={{ color: 'var(--text-secondary)' }}>Already have an account? </span>
           <Link to="/login" style={{ color: '#00D4FF', textDecoration: 'none', fontWeight: 600 }}>
             Login Here
           </Link>

@@ -147,7 +147,7 @@ const FacultyDashboard = () => {
           <button onClick={() => setStatusFilter('rejected')} className={`nav-link ${statusFilter === 'rejected' ? 'active' : ''}`} style={{ border: 'none', background: 'none', cursor: 'pointer', textAlign: 'left', display: 'flex', alignItems: 'center', gap: '10px', borderRadius: '10px' }}>
             <XCircle size={18} style={{ color: '#FF6B6B' }} /> Rejected
           </button>
-          <hr style={{ border: 'none', borderTop: '1px solid rgba(255,255,255,0.08)', margin: '16px 0' }} />
+          <hr style={{ border: 'none', borderTop: '1px solid var(--glass-border)', margin: '16px 0' }} />
           <button onClick={handleLogout} className="nav-link" style={{ width: '100%', border: 'none', background: 'none', cursor: 'pointer', textAlign: 'left', display: 'flex', alignItems: 'center', gap: '10px', color: '#FF6B6B' }}>
             <LogOut size={18} /> Logout
           </button>
@@ -162,46 +162,46 @@ const FacultyDashboard = () => {
           <GlassCard style={{ padding: '20px', textAlign: 'center' }}>
             <Users size={32} style={{ color: '#00D4FF', margin: '0 auto 8px auto' }} />
             <h4 style={{ fontSize: '1.8rem', fontWeight: 800 }}>{stats.total}</h4>
-            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem' }}>Total Applications</p>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>Total Applications</p>
           </GlassCard>
           <GlassCard style={{ padding: '20px', textAlign: 'center' }}>
             <Clock size={32} style={{ color: '#FFE66D', margin: '0 auto 8px auto' }} />
             <h4 style={{ fontSize: '1.8rem', fontWeight: 800 }}>{stats.pending}</h4>
-            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem' }}>Pending / In Review</p>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>Pending / In Review</p>
           </GlassCard>
           <GlassCard style={{ padding: '20px', textAlign: 'center' }}>
             <CheckCircle size={32} style={{ color: '#2ECC71', margin: '0 auto 8px auto' }} />
             <h4 style={{ fontSize: '1.8rem', fontWeight: 800 }}>{stats.accepted}</h4>
-            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem' }}>Accepted</p>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>Accepted</p>
           </GlassCard>
           <GlassCard style={{ padding: '20px', textAlign: 'center' }}>
             <XCircle size={32} style={{ color: '#FF6B6B', margin: '0 auto 8px auto' }} />
             <h4 style={{ fontSize: '1.8rem', fontWeight: 800 }}>{stats.rejected}</h4>
-            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem' }}>Rejected</p>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>Rejected</p>
           </GlassCard>
         </div>
 
         {/* Filters and search box */}
         <GlassCard style={{ padding: '24px' }}>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', alignItems: 'center' }}>
-            <div style={{ flex: 1, minWidth: '200px', display: 'flex', gap: '8px', alignItems: 'center', background: 'rgba(255,255,255,0.04)', borderRadius: '10px', padding: '4px 12px', border: '1px solid rgba(255,255,255,0.15)' }}>
-              <Search size={18} style={{ color: 'rgba(255,255,255,0.5)' }} />
+            <div style={{ flex: 1, minWidth: '200px', display: 'flex', gap: '8px', alignItems: 'center', background: 'var(--glass-bg)', borderRadius: '10px', padding: '4px 12px', border: '1px solid var(--glass-border)' }}>
+              <Search size={18} style={{ color: 'var(--text-muted)' }} />
               <input
                 type="text"
                 placeholder="Search by student name..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                style={{ background: 'none', border: 'none', color: '#fff', outline: 'none', width: '100%', padding: '8px 0' }}
+                style={{ background: 'none', border: 'none', color: 'var(--text-primary)', outline: 'none', width: '100%', padding: '8px 0' }}
               />
             </div>
 
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-              <select className="glass-input" style={{ width: '160px', background: '#111827' }} value={courseFilter} onChange={(e) => setCourseFilter(e.target.value)}>
+              <select className="glass-input" style={{ width: '160px' }} value={courseFilter} onChange={(e) => setCourseFilter(e.target.value)}>
                 <option value="">All Branches</option>
                 {branches.map((b, idx) => <option key={idx} value={b}>{b}</option>)}
               </select>
 
-              <select className="glass-input" style={{ width: '140px', background: '#111827' }} value={categoryFilter} onChange={(e) => setCategoryFilter(e.target.value)}>
+              <select className="glass-input" style={{ width: '140px' }} value={categoryFilter} onChange={(e) => setCategoryFilter(e.target.value)}>
                 <option value="">All Categories</option>
                 <option value="General">General</option>
                 <option value="OBC">OBC</option>
@@ -220,7 +220,7 @@ const FacultyDashboard = () => {
               <span>Fetching applications...</span>
             </div>
           ) : applications.length === 0 ? (
-            <div style={{ textAlign: 'center', padding: '40px', color: 'rgba(255,255,255,0.5)' }}>
+            <div style={{ textAlign: 'center', padding: '40px', color: 'var(--text-muted)' }}>
               <Users size={48} style={{ margin: '0 auto 12px auto' }} />
               <p>No applications match the search or filter criteria.</p>
             </div>
@@ -298,14 +298,13 @@ const FacultyDashboard = () => {
               <p><strong>Documents Attached:</strong> {selectedApp.documents?.join(', ') || 'None'}</p>
             </div>
 
-            <hr style={{ border: 'none', borderTop: '1px solid rgba(255,255,255,0.1)', margin: '16px 0' }} />
+            <hr style={{ border: 'none', borderTop: '1px solid var(--glass-border)', margin: '16px 0' }} />
 
             <form onSubmit={handleUpdateStatus}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '16px' }}>
                 <label style={{ fontSize: '0.9rem', fontWeight: 600 }}>Review Decision Status</label>
                 <select
                   className="glass-input"
-                  style={{ background: '#111827' }}
                   value={updateStatus}
                   onChange={(e) => setUpdateStatus(e.target.value)}
                 >

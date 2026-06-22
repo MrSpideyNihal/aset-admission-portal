@@ -36,9 +36,9 @@ const Navbar = () => {
         position: 'sticky',
         top: 0,
         zIndex: 50,
-        background: 'rgba(11, 15, 25, 0.4)',
+        background: 'var(--glass-bg)',
         backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+        borderBottom: '1px solid var(--glass-border)',
         transition: 'all 0.3s ease'
       }}
     >
@@ -136,10 +136,10 @@ const Navbar = () => {
           onClick={() => setIsOpen(!isOpen)}
           className="md-hidden"
           style={{
-            background: 'rgba(255, 255, 255, 0.05)',
-            border: '1px solid rgba(255, 255, 255, 0.15)',
+            background: 'var(--glass-btn-bg)',
+            border: '1px solid var(--glass-btn-border)',
             borderRadius: '10px',
-            color: 'white',
+            color: 'var(--text-primary)',
             padding: '8px',
             cursor: 'pointer',
             display: 'flex',
@@ -160,10 +160,10 @@ const Navbar = () => {
             top: '85px',
             left: '16px',
             right: '16px',
-            background: 'rgba(11, 15, 25, 0.95)',
+            background: 'var(--mobile-menu-bg)',
             backdropFilter: 'blur(20px)',
             borderRadius: '16px',
-            border: '1px solid rgba(255, 255, 255, 0.15)',
+            border: '1px solid var(--glass-border)',
             padding: '24px',
             display: 'flex',
             flexDirection: 'column',
@@ -204,7 +204,7 @@ const Navbar = () => {
             <ContactIcon size={18} /> Contact
           </NavLink>
 
-          <hr style={{ border: 'none', borderTop: '1px solid rgba(255, 255, 255, 0.1)', margin: '8px 0' }} />
+          <hr style={{ border: 'none', borderTop: '1px solid var(--glass-border)', margin: '8px 0' }} />
 
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '4px 12px', marginBottom: '8px' }}>
             <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 500 }}>Theme Mode</span>
