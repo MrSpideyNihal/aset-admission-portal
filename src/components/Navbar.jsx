@@ -1,13 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { Menu, X, LogOut, LayoutDashboard, Award, Landmark, BookOpen, Contact as ContactIcon } from 'lucide-react';
+import { Menu, X, LogOut, LayoutDashboard, Award, Landmark, BookOpen, Contact as ContactIcon, Sun, Moon } from 'lucide-react';
 import GlassButton from './GlassButton';
 
 const Navbar = () => {
   const { user, logout, isAuthenticated } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+
+  useEffect(() => {
+    if (theme === 'light') {
+      document.body.classList.add('light-theme');
+    } else {
+      document.body.classList.remove('light-theme');
+    }
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   const handleLogout = () => {
     logout();
@@ -79,6 +89,25 @@ const Navbar = () => {
 
         {/* Auth CTAs / Dashboard */}
         <div style={{ display: 'none', gap: '12px', alignItems: 'center' }} className="md-flex">
+          <button
+            onClick={() => setTheme(prev => prev === 'dark' ? 'light' : 'dark')}
+            title="Toggle theme mode"
+            style={{
+              background: 'var(--glass-btn-bg)',
+              border: '1px solid var(--glass-btn-border)',
+              borderRadius: '12px',
+              color: 'var(--text-primary)',
+              padding: '10px',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              transition: 'all 0.3s ease',
+              marginRight: '4px'
+            }}
+          >
+            {theme === 'light' ? <Moon size={18} style={{ color: 'var(--accent-purple)' }} /> : <Sun size={18} style={{ color: '#FFE66D' }} />}
+          </button>
           {isAuthenticated ? (
             <>
               <GlassButton to={getDashboardLink()} variant="secondary" style={{ padding: '8px 16px', fontSize: '0.9rem' }}>
@@ -176,6 +205,28 @@ const Navbar = () => {
           </NavLink>
 
           <hr style={{ border: 'none', borderTop: '1px solid rgba(255, 255, 255, 0.1)', margin: '8px 0' }} />
+
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '4px 12px', marginBottom: '8px' }}>
+            <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 500 }}>Theme Mode</span>
+            <button
+              onClick={() => setTheme(prev => prev === 'dark' ? 'light' : 'dark')}
+              style={{
+                background: 'var(--glass-btn-bg)',
+                border: '1px solid var(--glass-btn-border)',
+                borderRadius: '10px',
+                color: 'var(--text-primary)',
+                padding: '8px 14px',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                transition: 'all 0.3s ease',
+                fontWeight: 600
+              }}
+            >
+              {theme === 'light' ? <><Moon size={16} /> Dark</> : <><Sun size={16} /> Light</>}
+            </button>
+          </div>
 
           {isAuthenticated ? (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>

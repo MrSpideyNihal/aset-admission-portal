@@ -56,7 +56,7 @@ const About = () => {
           <div style={{ flex: 1, minWidth: '250px' }}>
             <h3 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '6px' }}>Principal's Message</h3>
             <span style={{ fontSize: '0.85rem', color: '#00D4FF', fontWeight: 600, display: 'block', marginBottom: '16px' }}>
-              Dr. P. R. Sreemahadevan Pillai
+              Dr. P R Suresh
             </span>
             <p style={{ color: 'rgba(255,255,255,0.8)', lineHeight: '1.6', fontSize: '0.95rem' }}>
               "Engineering is the art of organizing and directing human activities to control the forces of nature for the benefit of humankind. At ASET, we emphasize hands-on learning, industrial projects, and professional values to prepare our scholars to meet modern industry challenges and innovate for tomorrow."
