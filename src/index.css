@@ -436,3 +436,35 @@ body::before {
     transform: translateX(0) scale(1);
   }
 }
+
+/* Custom Cursor Hover classes */
+.cursor-hover {
+  width: 65px !important;
+  height: 65px !important;
+  top: -32.5px !important;
+  left: -32.5px !important;
+  background-color: rgba(6, 182, 212, 0.08) !important;
+  border-color: rgba(139, 92, 246, 0.7) !important;
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.45) !important;
+}
+
+.dot-hover {
+  background-color: #8B5CF6 !important;
+  box-shadow: 0 0 12px #8B5CF6 !important;
+  transform: scale(0.5) !important;
+}
+
+/* Hide native cursor for desktop screens to enhance effect */
+@media (pointer: fine) {
+  body, 
+  body a, 
+  body button, 
+  body input, 
+  body select, 
+  body textarea, 
+  body [role="button"], 
+  body .glass-panel-hover {
+    cursor: none !important;
+  }
+}
+

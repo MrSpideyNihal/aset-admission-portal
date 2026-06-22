@@ -4,6 +4,7 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import { ToastProvider } from './context/ToastContext';
 import Navbar from './components/Navbar';
 import BokehBackground from './components/BokehBackground';
+import CustomCursor from './components/CustomCursor';
 
 // Pages
 import Home from './pages/Home';
@@ -65,6 +66,8 @@ function App() {
     <Router>
       <ToastProvider>
         <AuthProvider>
+          {/* Custom trailing cursor effect */}
+          <CustomCursor />
           {/* Animated glass layout background */}
           <BokehBackground />
           
