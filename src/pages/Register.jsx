@@ -96,8 +96,24 @@ const Register = () => {
           ></div>
         </div>
 
-        <div style={{ textAlign: 'center', marginBottom: '24px' }}>
-          <h2 className="gradient-text-purple-cyan" style={{ fontSize: '1.8rem', fontWeight: 800 }}>
+        <div style={{ textAlign: 'center', marginBottom: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <div style={{ 
+            width: '60px', 
+            height: '60px', 
+            borderRadius: '16px', 
+            background: '#ffffff', 
+            padding: '4px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            boxShadow: '0 0 15px rgba(255,255,255,0.15)',
+            border: '1px solid rgba(255,255,255,0.25)',
+            overflow: 'hidden',
+            marginBottom: '12px'
+          }}>
+            <img src="/ahalia-logo.jpg" alt="Ahalia Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+          </div>
+          <h2 className="gradient-text-purple-cyan" style={{ fontSize: '1.8rem', fontWeight: 800, fontFamily: 'var(--font-display)' }}>
             Create Account
           </h2>
           <p style={{ color: 'rgba(255, 255, 255, 0.6)', fontSize: '0.9rem', marginTop: '4px' }}>

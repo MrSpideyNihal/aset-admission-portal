@@ -34,9 +34,21 @@ const Navbar = () => {
     >
       <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px', height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         {/* Brand */}
-        <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
-          <div style={{ padding: '8px', borderRadius: '12px', background: 'rgba(255, 255, 255, 0.08)', border: '1px solid rgba(255, 255, 255, 0.15)' }}>
-            <Award className="text-cyan-400" size={24} style={{ color: '#00D4FF' }} />
+        <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
+          <div style={{ 
+            width: '42px', 
+            height: '42px', 
+            borderRadius: '12px', 
+            background: '#ffffff', 
+            padding: '3px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            boxShadow: '0 0 12px rgba(255,255,255,0.15)',
+            border: '1px solid rgba(255,255,255,0.25)',
+            overflow: 'hidden'
+          }}>
+            <img src="/ahalia-logo.jpg" alt="Ahalia Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
           </div>
           <span className="gradient-text-purple-cyan" style={{ fontSize: '1.6rem', fontWeight: 800, letterSpacing: '1px', fontFamily: 'var(--font-display)' }}>
             ASET
